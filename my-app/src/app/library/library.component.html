@@ -1,0 +1,17 @@
+<p>library works!</p>
+
+
+     <label>Title: </label>
+     <input type="text" [(ngModel)]='uTitle'>
+
+     <label>Author: </label>
+     <input type="text" [(ngModel)]='uAuthor'>
+
+     <label>Date: </label>
+     <input type="text" [(ngModel)]='uDate'>
+
+     <button (click)='addBook()'>Enter Book</button>
+
+     <ul >
+          <li *ngFor="let book of DataBase" > {{ book.cTitle + "-" + book.cAuthor + "-" + book.cDate  }} </li>
+     </ul>
