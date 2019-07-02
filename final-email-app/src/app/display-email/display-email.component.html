@@ -1,0 +1,12 @@
+<div (click)="toggle()" class="container-fluid pl-0">
+     <div class="row">
+          <div class="col">
+                    <h5>{{this.singleMessage.emailFrom}}</h5>
+               </div>
+          <div class="col text-right">
+               <h5><small>{{this.singleMessage.emailDateTime}}</small></h5>
+          </div>
+	</div>
+	<h4 class="UserEmailSubject">{{this.singleMessage.emailSubject}}</h4>
+	<p class="UserEmail">{{this.singleMessage.emailMesage}}</p>
+</div>
