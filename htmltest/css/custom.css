@@ -1,0 +1,39 @@
+#myLeft{
+     height: 400px;
+     background-color: grey;
+     border: 1px solid black;
+}
+
+#myRight{
+     height: 400px;
+     background-color: lightblue;
+
+     border: 1px solid black;
+}
+
+.padding-0{
+     padding-left: 0;
+     padding-right: 0;
+}
+
+.myBadge{
+     position: relative;
+     top: -5px;
+     height: 22px;
+     width: 22px;
+     line-height: 22px;
+
+     text-align: center;
+     display: inline-block;
+     border-radius: 50%;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+     pointer-events: none;
+
+     font-weight: 100%;
+     font-size: 12px;
+
+     color: white;
+     background-color: red;
+}
