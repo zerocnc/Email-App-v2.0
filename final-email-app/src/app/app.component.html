@@ -1,18 +1,20 @@
 <div class="container vh-100">
 	<div class="row vh-100 d-flex">
+		<!-- Left Column-->
 		<div class="order-2 col-sm-12 order-sm-2 col-md-3 order-md-1 col-lg-4 order-lg-1 bg-light ">
 			<app-user-info [(currentUser)]="currentUser"></app-user-info>
-			<app-user-folders></app-user-folders>
+			<app-user-folders [(currentUser)]="currentUser"></app-user-folders>
 		</div>
+		<!-- Right Column -->
 		<div class="order-1 col-sm-12 order-sm-1 col-md-9 order-md-2 col-lg-8 order-lg-2 ">
-			<app-user-search-email></app-user-search-email>
+			<app-user-search-email ></app-user-search-email>
 
 			<div *ngFor="let item of currentUser.userMessages; let i = index" class="mt-2 mb-sm-1 mb-md-5" >
-				<div class="row userMessage">
+				<div class="row userMessage"  (click)="setRow(i)" [class.selected]="i === selectedIndex" >
 				    <div class="col-1 position-relative">
 						<p class="text-center" *ngIf="item.isNew"><i class="text-primary positionDot fas fa-circle"></i></p>
 					</div>
-						<div class="col-10 pl-0">
+						<div class="col-10 px-0">
 							<app-display-email (messageEvent)="receiveMessage($event, i)" [(singleMessage)]="item"></app-display-email>
 					    </div>
 				</div>

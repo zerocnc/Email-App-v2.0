@@ -23,7 +23,8 @@ export class UserMessage{
           this.hasBeenSent = false;
           this.isSpam = false;
           this.isTrash = false;
-     }
+	 }
+	 
 }
 
 export class UserAccount {
@@ -35,11 +36,13 @@ export class UserAccount {
      userMessages: Array<UserMessage> = new Array<UserMessage>();
 
 
-     constructor(){
+	 constructor()
+	 {
           this.userName = "";
           this.userEmail = "";
 
-          this.userImageSrc = "./src/common/Caitlyn.jpg";
+		  this.userImageSrc = "./src/common/Caitlyn.jpg";
+		  
      }
 
 }

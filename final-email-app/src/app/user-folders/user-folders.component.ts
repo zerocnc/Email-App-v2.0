@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+
+import { UserAccount } from '../user-account';
 
 @Component({
   selector: 'app-user-folders',
@@ -6,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-folders.component.css']
 })
 export class UserFoldersComponent implements OnInit {
+
+  @Input() currentUser: UserAccount;
 
   constructor() { }
 
