@@ -8,6 +8,8 @@ import { UserFoldersComponent } from './user-folders/user-folders.component';
 import { UserSearchEmailComponent } from './user-search-email/user-search-email.component';
 import { DisplayEmailComponent } from './display-email/display-email.component';
 import { MyBadgeDirective } from './my-badge.directive';
+import { MyButtonDirective } from './myButton/my-button.directive';
+import { InputTextDirective } from './input-text/input-text.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { MyBadgeDirective } from './my-badge.directive';
     UserFoldersComponent,
     UserSearchEmailComponent,
     DisplayEmailComponent,
-    MyBadgeDirective
+    MyBadgeDirective,
+    MyButtonDirective,
+    InputTextDirective
   ],
   imports: [
     BrowserModule, CommonModule
