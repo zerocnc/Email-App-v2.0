@@ -6,30 +6,36 @@
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <title>Document</title>
 
-     <link rel="stylesheet" href="./css/custom.css">
      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-     <div class="container">
-          <div class="row">
-               <div class="d-none d-sm-block d-md-block col-md-3 col-lg-3 col-xl-3 px-0 ">
-                         <img src="./images/Caitlyn.png" class="img-thumbnail rounded-circle">
-                         <h3>Name</h3>
-                         <h3>caitlyn@lol.riot.net</h3>
-               </div>
-               <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 px-0">
-                    <div id="myRight">
-                         <h1>right</h1>
-                         <ul>
-                              <li>test<span class="myBadge">22</span></li>
-                         </ul>
+<body class="bg">
+<div class="container-fluid">
+     <div class="row justify-content-center">
+          <div class="col-md-4 col-sm-4 col-xs-12"></div>
+          <div class="col-md-4 col-sm-4 col-xs-12">
+               <!-- form start -->
+               <form class="form-container">
+                    <div class="form-group invisibleBox">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                     </div>
-               </div>
+                    <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Remember Me</label>
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block">Submit</button>
+                    </form>
+               <!-- form end -->
           </div>
-          <div class="row d-none d-sm-block d-md-none">
-                    <h5>Footer</h5> 
-          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12"></div>
      </div>
+</div>
 
 
      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

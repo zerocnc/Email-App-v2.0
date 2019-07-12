@@ -1,0 +1,23 @@
+.bg {
+     background-image: url('../images/megamanx.png');
+     background-position: center center;
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+}
+
+.form-container{
+     font-weight: 600;
+
+     border: 1px solid #fff;
+     color: white;
+     background-color: black;
+
+     padding: 50px 60px;
+     margin-top: 20vh;
+     box-shadow: 13px 15px 22px 0px rgba(0,0,0,0.75);
+}
+
+.invisibleBox:before{
+     opacity: .9;
+}
