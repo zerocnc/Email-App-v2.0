@@ -1,0 +1,32 @@
+<div class="wrapper fadeInDown">
+	<div class="pt-3" id="formContent">
+		<!-- Tabs Titles -->
+		<!-- Icon -->
+		<div id="iconProfile" class="fadeIn first">
+			<div id="iconBadge"><i  class="far fa-user-circle fa-10x"></i></div>
+		</div>
+		
+		<!-- Login Form -->
+		<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+			<!-- <input id="email" placeholder="email" formControlName='email' required> -->
+
+			<div class="form-group align-items-center">
+				<input formControlName="email" type="text" class="fadeIn second"  placeholder="email account" [email]="true" required>
+				<div class="alert alert-danger block" *ngIf="email?.invalid && email?.touched">valid email is required</div>
+				<!-- <div class="alert alert-danger block" *ngIf="email.errors?.required">Email is required.</div> -->
+			</div>
+			<div class="form-group">
+				<input type="password" id="password" class="fadeIn third" formControlName="password" placeholder="password">
+			</div>
+			<div class="form-group">
+				<input type="checkbox" class="form-check-input fadeIn fourth" id="userRememberMe" formControlName="rememberMe">
+				<label class="form-check-label fadeIn fourth" for="rememberMe">Remember Me</label>
+			</div>
+			<div class="form-group px-4">
+				<button type="button" class="btn btn-success btn-lg btn-block" [disabled]="loginForm.invalid">Login</button>
+				<button type="button" class="fadeIn fifth btn btn-danger btn-lg btn-block mb-2" >Need help?</button>
+				<button type="button" class="fadeIn sixth btn btn-primary btn-lg btn-block mb-2" >New User </button>
+			</div>
+		</form>
+    </div>
+</div>
