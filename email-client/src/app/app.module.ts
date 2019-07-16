@@ -9,9 +9,13 @@ import { MessageFormComponent } from './message-form/message-form.component';
 import { EmailFormComponent } from './email-form/email-form.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 const routes: Routes = [
   { path: '', component: LoginFormComponent},
   { path: 'signup', component: SignupFormComponent },
+  { path: 'message', component: EmailFormComponent },
   { path: '**', component: PageNotFoundComponent }
   ];
 
@@ -22,11 +26,13 @@ const routes: Routes = [
     SignupFormComponent,
     MessageFormComponent,
     EmailFormComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
