@@ -1,0 +1,30 @@
+.selected{
+     background-color: red;
+}
+
+.main-wrapper{
+     height: 100vh;
+     width: 100vw;
+}
+
+.eq-row-height{
+     display: flex;
+     flex-direction: column;
+}
+
+.positionDot{
+     position: absolute;
+     top: 40px;
+}
+
+.selected{
+     background-color: aquamarine;
+}
+
+.myGrey{
+     background-color: rgb(226, 223, 223);
+}
+
+.userMessage:hover{
+     background-color: yellow;
+}
