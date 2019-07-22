@@ -1,15 +1,14 @@
-import { Component, Input, Output } from '@angular/core';
-import { UserAccount } from './user-account';
+import { Component, OnInit } from '@angular/core';
+import { UserAccount } from '../user-account';
 
 @Component({
-	selector: 'app-root',
-	templateUrl: './app.component.html',
-	styleUrls: ['./app.component.scss']
+  selector: 'app-main-email',
+  templateUrl: './main-email.component.html',
+  styleUrls: ['./main-email.component.css']
 })
-export class AppComponent {
-	title = 'final-email-app';
+export class MainEmailComponent implements OnInit {
 
-	displayFlag: boolean;
+  displayFlag: boolean;
 	selectedIndex: number = null;
 
 	currentUser: UserAccount =  {
@@ -76,11 +75,7 @@ export class AppComponent {
 			}]
 	}
 
-	constructor(){
-
-	}
-
-	recieveMessage($event, i){
+  	recieveMessage($event, i){
 		this.displayFlag = $event;
 		this.currentUser.userMessages[i].isNew = false;
 	}
@@ -88,5 +83,10 @@ export class AppComponent {
 	setRow(_index: number){
 		this.selectedIndex = _index;
 	}
-  
+
+	constructor() { }
+
+	ngOnInit() {
+	}
+
 }

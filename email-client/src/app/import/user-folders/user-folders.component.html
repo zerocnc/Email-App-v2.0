@@ -1,0 +1,24 @@
+<div class="container mt-3">
+	<div class="row"> <!-- Button -->
+		<div class="col px-0 align-items-center">
+			<button type="button" class="myButton" appMyButton >new message</button>
+		</div>
+		
+	</div>
+	<div class="row">
+		<div class="col-12 mt-3">
+			<h4 class="lead">folders</h4>
+			<!-- List of Icons -->
+			<div class="container">
+					<ul class="fa-ul">
+						<li><i class="fa-li fa fa-caret-down fa-fw text-primary"></i>inbox<div appMyBadge [userColor]="'red'">4</div>
+						</li>
+						 <li><i class="fa-li fa fa-caret-right fa-fw text-primary"></i>drafts</li>
+						 <li><i class="fa-li fa fa-caret-right fa-fw text-primary"></i>sent</li>
+						 <li><i class="fa-li fa fa-flag fa-fw text-primary"></i>spam</li>
+						 <li><i class="fa-li fa fa-trash-alt fa-fw text-primary"></i>trash</li>
+					</ul> 
+			   </div>
+		  </div>
+	</div>
+</div>

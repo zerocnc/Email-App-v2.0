@@ -1,0 +1,29 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- New One -->
+<!-- On click not working-->
+
+<div class="container h-100">
+     <div class="row align-items-center d-flex h-100">
+          <div class="col-sm-12 col-md-3 col-lg-4 col-xl-4 bg-light vh-100">
+               <app-user-info [(currentUser)]="currentUser"></app-user-info>
+               <app-user-folders [(currentUser)]="currentUser"></app-user-folders>
+
+          </div>
+          <div class="col-sm-12 col-md-9 col-lg-8 col-xl-8 h-100 bg-white">
+               <!-- <app-user-messages [(currentUser)]="currentUser"></app-user-messages> -->
+               <app-user-search-email ></app-user-search-email>
+
+               <div *ngFor="let item of currentUser.userMessages; let i = index" class="mt-2 mb-sm-1 mb-md-5" >
+				<div class="row userMessage currentHover"  (click)="setRow(i)" [class.selected]="i === selectedIndex" >
+				    <div class="col-1 position-relative">
+						<p class="text-center" *ngIf="item.isNew"><i class="text-primary positionDot fas fa-circle"></i></p>
+					</div>
+						<div class="col-10 px-0">
+							<!-- The Message -->
+							<app-display-email (messageEvent)="receiveMessage($event, i)" [(singleMessage)]="item"></app-display-email>
+					    </div>
+				</div>
+			</div>
+          </div>
+     </div>
+</div>

@@ -8,4 +8,5 @@ import { RouterModule, Routes } from '@angular/router';
 })
 export class AppComponent {
   title = 'email-client';
+
 }

@@ -1,12 +1,13 @@
+<!-- Old Version - But Works -->
 <div class="container vh-100">
-	<div class="row vh-100 d-flex">
+	<div class="row vh-100 d-flex bg-white">
 		<!-- Left Column-->
 		<div class="order-2 col-sm-12 order-sm-2 col-md-3 order-md-1 col-lg-4 order-lg-1 myGrey ">
 			<app-user-info [(currentUser)]="currentUser"></app-user-info>
 			<app-user-folders [(currentUser)]="currentUser"></app-user-folders>
 		</div>
 		<!-- Right Column -->
-		<div class="order-1 col-sm-12 order-sm-1 col-md-9 order-md-2 col-lg-8 order-lg-2 ">
+		<div class="order-1 col-sm-12 order-sm-1 col-md-9 order-md-2 col-lg-8 order-lg-2 bg-white ">
 			<app-user-search-email ></app-user-search-email>
 			<!-- Display each email by row -->
 			<div *ngFor="let item of currentUser.userMessages; let i = index" class="mt-2 mb-sm-1 mb-md-5" >
