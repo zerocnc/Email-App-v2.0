@@ -1,34 +1,36 @@
 <div class="wrapper fadeInDown">
      <div class="pt-3" id="formContent">
-     <!-- Tabs Titles -->
+     <!-- Tabs Titles  -->
      <!-- Icon -->
-     <div id="iconProfile" class="fadeIn first">
-          <div id="iconBadge"><i  class="far fa-user-circle fa-10x"></i></div>
-     </div>
+          <div id="iconProfile" class="fadeIn first">
+               <div id="iconBadge"><i  class="far fa-user-circle fa-10x"></i></div>
+          </div>
           <!-- Login Form -->
           <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-               <div class="form-group align-items-center">
-                    <input required type="email" formControlName="email" class="fadeIn second"  placeholder="email" [email]="true" >
+               <div class="form-group ">
+                    <input required type="email" id="login" formControlName="email" class="fadeIn second"  placeholder="email" [email]="true" >
                     <div class="alert alert-danger block" *ngIf="email?.invalid && email?.touched">valid email is required</div>
-                    <!-- <div class="alert alert-danger block" *ngIf="!email.errors?.required">Email is required.</div> -->
+                    <!-- <div class="alert alert-danger block" *ngIf="!email.errors?.required">Email is required.</div> --> 
                </div>
 
                <div class="form-group">
                     <input required type="password" class="fadeIn third" formControlName="password" placeholder="password">
                </div>
+
                <div class="form-group">
                     <input type="checkbox" class="form-check-input fadeIn fourth" id="userRememberMe" formControlName="rememberMe">
-                    <label class="form-check-label fadeIn fourth" for="rememberMe">Remember Me</label>
+                    <label class="form-check-label fadeIn fourth" for="userRememberMe">Remember Me</label>
                </div>
+
                <div class="form-group px-4">
                     <a routerLink="email">
                          <button type="button" class="btn btn-success btn-lg btn-block" [disabled]="loginForm.invalid">Login</button>
                     </a>
-                    <button type="button" class="fadeIn fifth btn btn-danger btn-lg btn-block mb-2" >Need help?</button>
-                    <a routerLink="signup">
-                         <button type="button" class="fadeIn sixth btn btn-primary btn-lg btn-block mb-2" >New User </button>
-                    </a>
+               </div>
+               <div id="formFooter">
+                    <a class="underlineHover" routerLink="signup">New? Sign up!</a>
                </div>
           </form>
      </div>
 </div>
+
