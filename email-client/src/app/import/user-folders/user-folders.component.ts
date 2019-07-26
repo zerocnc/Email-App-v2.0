@@ -5,7 +5,7 @@ import { UserAccount } from '../../user-account';
 @Component({
   selector: 'app-user-folders',
   templateUrl: './user-folders.component.html',
-  styleUrls: ['./user-folders.component.scss']
+  styleUrls: ['./user-folders.component.css']
 })
 export class UserFoldersComponent implements OnInit {
 

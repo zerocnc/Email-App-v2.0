@@ -23,7 +23,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { from } from 'rxjs';
 
 const routes: Routes = [
-  { path: '', component: LoginFormComponent},
+  { path: '', pathMatch: 'full' , component: LoginFormComponent},
   { path: 'signup', component: SignupFormComponent },
   { path: 'message', component: EmailFormComponent },
   { path: 'email', component: MainEmailComponent},
